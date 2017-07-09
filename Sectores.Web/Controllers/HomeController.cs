@@ -10,9 +10,27 @@ namespace Sectores.Web.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
-
             return View();
+        }
+
+        public ActionResult Dashboard()
+        {
+            return PartialView();
+        }
+
+        public ActionResult Sector()
+        {
+            return PartialView();
+        }
+
+        public ActionResult Ciudad()
+        {
+            return PartialView();
+        }
+
+        public ActionResult Pais()
+        {
+            return PartialView();
         }
     }
 }

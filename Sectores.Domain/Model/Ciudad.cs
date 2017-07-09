@@ -14,7 +14,6 @@ namespace Sectores.Domain.Model
             Sectores = new HashSet<Sector>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [Required]

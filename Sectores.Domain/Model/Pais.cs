@@ -13,7 +13,6 @@ namespace Sectores.Domain.Model
             Ciudades = new HashSet<Ciudad>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [Required]

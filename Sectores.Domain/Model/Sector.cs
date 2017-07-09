@@ -9,7 +9,6 @@ namespace Sectores.Domain.Model
     [Table("Sector")]
     public partial class Sector
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [Required]
