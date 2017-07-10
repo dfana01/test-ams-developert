@@ -15,6 +15,7 @@ namespace Sectores.Domain.Model
         public virtual DbSet<Ciudad> Ciudades { get; set; }
         public virtual DbSet<Pais> Paises { get; set; }
         public virtual DbSet<Sector> Sectores { get; set; }
+        public virtual DbSet<vSectores> vSectoresList { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -9,11 +9,11 @@
         "sectorWeb.ctrl.ciudad",
         "sectorWeb.ctrl.pais",
         "sectorWeb.ctrl.modal",
-        /*"sectorWeb.ctrl.reports",*/
+        "sectorWeb.ctrl.reports",
         "sectorWeb.service.sector",
         "sectorWeb.service.ciudad",
-        "sectorWeb.service.pais" /*,
-        "sectorWeb.service.reports" */
+        "sectorWeb.service.pais",
+        "sectorWeb.service.reports"
     ])
     .config(["$routeProvider", "$locationProvider", function($routeProvider, $locationProvider) {
 
@@ -32,6 +32,14 @@
         $routeProvider.when("/pais/", {
             templateUrl: "/Home/Pais",
             controller: "paisCtrl"
+        });
+        $routeProvider.when("/reports/", {
+            templateUrl: "/Home/Reports",
+            controller: "reportsCtrl"
+        });
+        $routeProvider.when("/reports/:param", {
+            templateUrl: "/Home/Reports",
+            controller: "reportsCtrl"
         });
         $routeProvider.otherwise({
             redirectTo: "/"

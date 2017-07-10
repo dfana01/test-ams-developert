@@ -1,0 +1,48 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header"><a href="#"><i class="fa fa-arrow-left fa-1x" aria-hidden="true" ng-click="back()"></i></a>   Reportes Sectores</h1>
+    </div>
+</div>
+<!-- /.row -->
+<div class="row col-lg-12">
+    <div class="row">
+        <div>
+            <form class="form-horizontal">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button id="update" class="btn btn-info" ng-click="refresh()"> <i class="fa fa-refresh fa-1x"></i> Actualizar Lista</button>
+                    </div>
+                    <input type="text" class="form-control" id="search" placeholder="Buscar..." ng-model="searchText" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div id="exportable" class="table-responsive ">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>SectorId</th>
+                    <th>Sector</th>
+                    <th>CiudadId</th>
+                    <th>Ciudad</th>
+                    <th>PaisId</th>
+                    <th>Pais</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="obj in list | filter:searchText">
+                    <td>{{ obj.Row}}</td>
+                    <td>{{ obj.SectorId}}</td>
+                    <td>{{ obj.SectorNombre}}</td>
+                    <td>{{ obj.CiudadId}}</td>
+                    <td>{{ obj.CiudadNombre}}</td>
+                    <td>{{ obj.PaisId}}</td>
+                    <td>{{ obj.PaisNombre}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

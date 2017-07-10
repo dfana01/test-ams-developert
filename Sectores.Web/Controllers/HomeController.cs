@@ -37,5 +37,10 @@ namespace Sectores.Web.Controllers
         {
             return PartialView();
         }
+
+        public ActionResult Reports()
+        {
+            return PartialView();
+        }
     }
 }
