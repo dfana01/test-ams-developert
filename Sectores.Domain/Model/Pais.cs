@@ -8,18 +8,11 @@ namespace Sectores.Domain.Model
 
     public partial class Pais
     {
-        public Pais()
-        {
-            Ciudades = new HashSet<Ciudad>();
-        }
-
         public int Id { get; set; }
 
         [Required]
         public string Nombre { get; set; }
 
         public bool? Activo { get; set; }
-
-        public virtual ICollection<Ciudad> Ciudades { get; set; }
     }
 }

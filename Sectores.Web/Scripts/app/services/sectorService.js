@@ -2,7 +2,7 @@
     .module("sectorWeb.service.sector", [])
     .factory("sectorService", ["$http",
         function ($http) {
-            var baseUrl = "/api/sector/";
+            var baseUrl = "/api/Sector/";
             return {
                 list: function () {
                     return $http({
@@ -29,7 +29,7 @@
                 update: function (obj) {
                     return $http({
                         method: "PUT",
-                        url: baseUrl,
+                        url: baseUrl + obj.Id,
                         data: obj
                     });
                 },

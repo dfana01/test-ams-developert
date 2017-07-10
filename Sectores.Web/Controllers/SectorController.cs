@@ -12,7 +12,7 @@ using Sectores.Domain.Model;
 
 namespace Sectores.Web.Controllers
 {
-    public class SectoresController : ApiController
+    public class SectorController : ApiController
     {
         private PruebaContext db = new PruebaContext();
 

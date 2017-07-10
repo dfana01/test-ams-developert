@@ -56,7 +56,6 @@
     <Compile Include="Model\PruebaContext.cs" />
     <Compile Include="Model\Pais.cs" />
     <Compile Include="Model\Sector.cs" />
-    <Compile Include="Model\VSectores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

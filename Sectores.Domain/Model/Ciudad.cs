@@ -9,11 +9,6 @@ namespace Sectores.Domain.Model
     [Table("Ciudad")]
     public partial class Ciudad
     {
-        public Ciudad()
-        {
-            Sectores = new HashSet<Sector>();
-        }
-
         public int Id { get; set; }
 
         [Required]
@@ -24,7 +19,5 @@ namespace Sectores.Domain.Model
         public int PaisID { get; set; }
 
         public virtual Pais Pais { get; set; }
-
-        public virtual ICollection<Sector> Sectores { get; set; }
     }
 }

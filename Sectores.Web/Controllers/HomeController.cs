@@ -32,5 +32,10 @@ namespace Sectores.Web.Controllers
         {
             return PartialView();
         }
+
+        public ActionResult Modal()
+        {
+            return PartialView();
+        }
     }
 }

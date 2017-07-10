@@ -15,7 +15,6 @@ namespace Sectores.Domain.Model
         public virtual DbSet<Ciudad> Ciudades { get; set; }
         public virtual DbSet<Pais> Paises { get; set; }
         public virtual DbSet<Sector> Sectores { get; set; }
-        public virtual DbSet<VSectores> VSectoresList { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -51,10 +50,7 @@ namespace Sectores.Domain.Model
                         .Parameter(p => p.Nombre, "Nombre")
                         .Parameter(p => p.Activo, "Activo")
                         .Parameter(p => p.PaisID, "PaisID"));
-                })
-                .HasMany(e => e.Sectores)
-                .WithRequired(e => e.Ciudad)
-                .WillCascadeOnDelete(false);
+                });
 
             modelBuilder.Entity<Pais>()
                 .MapToStoredProcedures(o =>
@@ -68,10 +64,7 @@ namespace Sectores.Domain.Model
                     o.Insert(i => i.HasName("sp_PaisCreate")
                         .Parameter(p => p.Nombre, "Nombre")
                         .Parameter(p => p.Activo, "Activo"));
-                })
-                .HasMany(e => e.Ciudades)
-                .WithRequired(e => e.Pais)
-                .WillCascadeOnDelete(false);
+                });
 
         }
     }

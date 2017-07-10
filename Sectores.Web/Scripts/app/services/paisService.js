@@ -2,7 +2,7 @@
     .module("sectorWeb.service.pais", [])
     .factory("paisService", ["$http",
         function ($http) {
-            var baseUrl = "/api/pais/";
+            var baseUrl = "/api/Pais/";
             return {
                 list: function () {
                     return $http({
@@ -22,14 +22,14 @@
                 get: function (id) {
                     return $http({
                         method: "GET",
-                        url: + id
+                        url: baseUrl + id
                     });
                 },
 
                 update: function (obj) {
                     return $http({
                         method: "PUT",
-                        url: baseUrl,
+                        url: baseUrl + obj.Id,
                         data: obj
                     });
                 },

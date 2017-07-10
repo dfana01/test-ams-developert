@@ -3,10 +3,12 @@
         "ngSanitize",
         "ngRoute",
         "ngResource",
+        "ui.bootstrap",
         "sectorWeb.ctrl.home",
         "sectorWeb.ctrl.sector",
         "sectorWeb.ctrl.ciudad",
         "sectorWeb.ctrl.pais",
+        "sectorWeb.ctrl.modal",
         /*"sectorWeb.ctrl.reports",*/
         "sectorWeb.service.sector",
         "sectorWeb.service.ciudad",
@@ -35,12 +37,23 @@
             redirectTo: "/"
         });
         $locationProvider.html5Mode(true);
-    }]).run(function ($rootScope, $location, $window) {
-            $rootScope.back = function () {
-                $window.history.back();
-            };
+    }]).run(function ($rootScope, $location, $window, $uibModal) {
+        $rootScope.back = function () {
+            $window.history.back();
+        };
 
-            $rootScope.go = function (path) {
-                $location.path(path);
-            };
+        $rootScope.go = function (path) {
+            $location.path(path);
+        };
+
+        $rootScope.modal = function(context) {
+            return $uibModal.open({
+                templateUrl: "/Home/Modal",
+                controller: "modalCtrl",
+                controllerAs: "$ctrl",
+                resolve: {
+                    context: function () { return context; }
+                }
+            });   
+        }
     });

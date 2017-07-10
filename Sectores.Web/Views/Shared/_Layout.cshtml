@@ -25,11 +25,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="/">Sector.Web v1.0</a>
+    <a class="navbar-brand" href="/">Sector.Web v1.0-Beta</a>
 </div>
 
 <!-- /.navbar-top-links -->
-<div class="navbar-default sidebar" role="navigation">
+<div ng-controller="homeCtrl" class="navbar-default sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
             <li class="sidebar-search">
@@ -44,16 +44,16 @@
                 <!-- /input-group -->
             </li>
             <li>
-                <a href="index.html"><i class="fa fa-home fa-fw"></i> Sectores</a>
+                <a href="/sector/" ng-click="go('/sector/')"><i class="fa fa-home fa-fw"></i> Sectores</a>
             </li>
             <li>
-                <a href="index.html"><i class="fa fa-map-marker fa-fw"></i> Ciudades</a>
+                <a href="/ciudad/" ng-click="go('/ciudad/')"><i class="fa fa-map-marker fa-fw"></i> Ciudades</a>
             </li>
             <li>
-                <a href="index.html"><i class="fa fa-globe fa-fw"></i> Paises</a>
+                <a href="/pais/" ng-click="go('/pais/')"><i class="fa fa-globe fa-fw"></i> Paises</a>
             </li>
             <li>
-                <a href="index.html"><i class="fa fa-info fa-fw"></i> Reportes</a>
+                <a href=""><i class="fa fa-info fa-fw"></i> Reportes</a>
             </li>
         </ul>
     </div>

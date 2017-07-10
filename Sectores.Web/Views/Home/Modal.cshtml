@@ -1,0 +1,6 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">{{$ctrl.title}}<strong>{{$ctrl.obj.Id? ": "+$ctrl.obj.Id+"-"+$ctrl.obj.Nombre :"" }}</strong></h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <ng-include src="$ctrl.contentTemplate"></ng-include>
+</div>

@@ -13,11 +13,7 @@ namespace Sectores.Web.Controllers
 
         private PruebaContext db = new PruebaContext();
 
-        // GET api/values
-        public IEnumerable<VSectores> Get()
-        {
-            return db.VSectoresList;
-        }
+      
    
     }
 }
